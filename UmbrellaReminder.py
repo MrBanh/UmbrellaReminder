@@ -39,9 +39,8 @@ def rain_check():
         # Get weather (rain or showers)
         weather = weather_regex.search(forecast).group(1)
         # Send text if there will be rain or showers, and the probability
-        textmyself(f'Today ({datetime.now().date()}): {forecast_chance}% chance of {weather}.')
-
-    # TODO:https://stackoverflow.com/questions/34622514/run-a-python-script-in-virtual-environment-from-windows-task-scheduler
+        textmyself(f'Today ({datetime.now().date()}): {forecast_chance}% '
+                   f'chance of {weather}.')
 
 
 if __name__ == "__main__":
